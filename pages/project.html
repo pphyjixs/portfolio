@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>项目展示</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
@@ -12,28 +14,31 @@
     </header>
 
     <!-- 导航栏 -->
-    <nav>
+    <nav class="nav">
+     <div class="nav-link">
         <ul>
             <li><a href="index.html">自我介绍</a></li>
-            <li><a href="project.html">项目展示</a></li>
+            <li><a href="project.html"  aria-current="page">项目展示</a></li>
             <li><a href="contact.html">联系方式</a></li>
         </ul>
+     </div>
     </nav>
 
 
     <main>
-        <section>
+        <section class="project-grid">
             <h2>项目展示</h2>
-            <ul>
-                <li>
-                    <img src="" alt="展示图片">
-                    <p>项目一：简单html骨架</p>
-                </li>
-                <li>
-                    <img src="" alt="展示图片">
-                    <p>项目二：加入css的基本网页</p>
-                </li>
-            </ul>
+
+            <article class="card">
+                <img src="" alt="展示图片">
+                <p>项目一：简单html骨架</p>
+            </article>
+           
+            <article class="card">
+                <img src="" alt="展示图片">
+                <p>项目二：加入css的基本网页</p>
+            </article>
+
         </section>
     </main>
 
