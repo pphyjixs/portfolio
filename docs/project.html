@@ -9,42 +9,87 @@
 </head>
 <body>
 
-    <header>
-        <h1>项目展示</h1>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="contact.html">
+                <img class="avatar"  src="../assets/img/avatar.png" alt="avatar">
+                <span class="brand-text">
+                    <strong>phyjixs</strong>
+                    <small>项目展示</small>
+                </span>
+            </a>
+
+            <nav class="site-nav">
+                <a href="index.html">主页</a>
+                <a href="project.html">项目展示</a>
+                <a href="contact.html">联系</a>
+            </nav>
+            
+        </div>
     </header>
 
-    <!-- 导航栏 -->
-    <nav class="nav">
-     <div class="nav-link">
-        <ul>
-            <li><a href="index.html">自我介绍</a></li>
-            <li><a href="project.html"  aria-current="page">项目展示</a></li>
-            <li><a href="contact.html">联系方式</a></li>
-        </ul>
-     </div>
-    </nav>
-
-
-    <main>
-        <section class="project-grid">
-            <h2>项目展示</h2>
-
-            <article class="card">
-                <img src="" alt="展示图片">
-                <p>项目一：简单html骨架</p>
-            </article>
-           
-            <article class="card">
-                <img src="" alt="展示图片">
-                <p>项目二：加入css的基本网页</p>
+    <main class="container layout">
+        <section class="content">
+            <article class="post-card">
+                <h2 class="post-title">title1</h2>
+                <p class="post-meta">time language</p>
+                <p class="post-excerpt">excerpt of page 1</p>
             </article>
 
+            <article class="post-card">
+                <h2 class="post-title">title2</h2>
+                <p class="post-meta">time language</p>
+                <p class="post-excerpt">excerpt of page 2</p>
+            </article>
+            <article class="post-card">
+                <h2 class="post-title">title2</h2>
+                <p class="post-meta">time language</p>
+                <p class="post-excerpt">excerpt of page 2</p>
+            </article>
+            <article class="post-card">
+                <h2 class="post-title">title2</h2>
+                <p class="post-meta">time language</p>
+                <p class="post-excerpt">excerpt of page 2</p>
+            </article>
+            <article class="post-card">
+                <h2 class="post-title">title2</h2>
+                <p class="post-meta">time language</p>
+                <p class="post-excerpt">excerpt of page 2</p>
+            </article>
+
+            <article class="post-card">
+                <h2 class="post-title">title2</h2>
+                <p class="post-meta">time language</p>
+                <p class="post-excerpt">excerpt of page 2</p>
+            </article>
+
+            <div class="pagination">
+                <a class="btn" href="#">上一页</a>
+                <a class="btn" href="#">下一页</a>
+            </div>
         </section>
+        
+        <aside class="sidebar">
+            <section class="side-card">
+                <h3>关于我</h3>
+                <p>一个深大计算机专业学生</p>
+            </section>
+
+            <section class="side-card">
+                <h3>标签</h3>
+                <div  class="tags">
+                    <a class="tag" href="#">html</a>
+                    <a class="tag" href="#">css</a>
+                    <a class="tag" href="#">js</a>
+                </div>
+            </section>
+        </aside>
     </main>
 
-    <footer>
-        <p>@phyjixs; 尝试个人网站</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 phyjixs Built my blog</p>
+        </div>
     </footer>
-
 </body>
 </html>

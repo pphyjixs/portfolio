@@ -9,33 +9,56 @@
 </head>
 <body>
     
-    <header>
-        <h1>联系方式</h1>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="contact.html">
+                <img class="avatar"  src="../assets/img/avatar.png" alt="avatar">
+                <span class="brand-text">
+                    <strong>phyjixs</strong>
+                    <small>联系方式</small>
+                </span>
+            </a>
+
+            <nav class="site-nav">
+                <a href="index.html">主页</a>
+                <a href="project.html">项目展示</a>
+                <a href="contact.html">联系</a>
+            </nav>
+            
+        </div>
     </header>
 
-    <nav class="nav">
-     <div class="container">
-        <div class="nav-link">
-        <ul>
-            <li><a href="index.html" >自我介绍</a></li>
-            <li><a href="project.html">项目展示</a></li>
-            <li><a href="contact.html" aria-current="page">联系方式</a></li>
-        </ul>
-     </div>
-     </div>
-    </nav>
 
-    <main>
-        <section class="sec-contact">
-            <h2>联系方式</h2>
-            <p><strong>邮箱：</strong>phyjixs@163.com</p>
-            <p><strong>Github: </strong>pphyjixs</p>
-
+    <main class="container layout">
+        <section class="content content-center">
+            <article class = "post-card">
+                <h2>联系方式</h2>
+                <p><strong>邮箱：</strong>phyjixs@163.com</p>
+                <p><strong>Github: </strong>pphyjixs</p>
+            </article>
         </section>
+
+        <aside class="sidebar">
+            <section class="side-card">
+                <h3>关于我</h3>
+                <p>一个深大计算机专业学生</p>
+            </section>
+
+            <section class="side-card">
+                <h3>标签</h3>
+                <div  class="tags">
+                    <a class="tag" href="#">html</a>
+                    <a class="tag" href="#">css</a>
+                    <a class="tag" href="#">js</a>
+                </div>
+            </section>
+        </aside>
     </main>
 
-    <footer>
-        <p>@phyjixs; 尝试个人网站</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 phyjixs Built my blog</p>
+        </div>
     </footer>
 
 
