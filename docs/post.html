@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系方式</title>
-
+    <title>项目展示</title>
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/post.css">
 </head>
 <body>
-    
+
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="contact.html">
                 <img class="avatar"  src="assets/img/avatar.png" alt="avatar">
                 <span class="brand-text">
                     <strong>phyjixs</strong>
-                    <small>联系方式</small>
+                    <small>项目展示</small>
                 </span>
             </a>
 
@@ -28,16 +29,9 @@
         </div>
     </header>
 
-
     <main class="container layout">
-        <section class="content content-center">
-            <article class = "post-card">
-                <h2>联系方式</h2>
-                <span class="contact-email" data-copy="phyjixs@163.com"><strong>邮箱：</strong>phyjixs@163.com</span>
-                <a href="https://github.com/pphyjixs"><p class="contact-way"><strong>Github: </strong>pphyjixs</p></a>
-            </article>
-        </section>
-
+        <div id="postBody"></div>
+        
         <aside class="sidebar">
             <section class="side-card">
                 <h3>关于我</h3>
@@ -64,6 +58,7 @@
     <button id="backToTop" >↑</button>
 
     <script src="js/main.js"></script>
-
+    <script src="js/vendor/marked.umd.js"></script>
+    <script src="js/post.js"></script>
 </body>
 </html>
