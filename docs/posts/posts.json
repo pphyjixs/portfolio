@@ -5,5 +5,12 @@
         "tags": ["汇总"],
         "excerpt": "关于速成前后端的学习路径",
         "md": "posts/List.md"
+    },
+    {
+        "title": "程设oj答案",
+        "date": "2026/1/21",
+        "tags": ["c++"],
+        "excerpt": "当助教时整理的oj答案，用来水位置",
+        "md": "posts/第16周.md"
     }
 ]

@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>项目展示</title>
     
+   <script>
+        (()=> {
+            try {
+                if (localStorage.getItem ("theme") === "dark") {
+                document.documentElement.classList.add ("dark");
+                } 
+            } catch {}
+        }) ();
+    </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header class="site-header">
         <div class="container header-inner">
-            <a class="brand" href="contact.html">
-                <img class="avatar"  src="assets/img/avatar.png" alt="avatar">
+           <div class="brand" href="contact.html">
+                <img class="avatar expandable-img"  src="assets/img/avatar.png" alt="avatar" >
                 <span class="brand-text">
                     <strong>phyjixs</strong>
                     <small>项目展示</small>
                 </span>
-            </a>
+            </div>
 
             <nav class="site-nav">
                 <a href="index.html">主页</a>
@@ -25,12 +34,28 @@
                 <a href="contact.html">联系</a>
             </nav>
             
+            <button id="theme-toggle" class="theme-toggle" aria-label="change theme">
+                🌙
+            </button>
+
         </div>
     </header>
 
     <main class="container layout">
         <section class="content">
-           <section id="postList"></section>
+
+            <div id="toolbar">
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题，概要，标签...">
+                <button id="clearSearch" class="btn btn-small" type="button">清空</button>
+            </div>
+
+            <section id="postList"></section>
+
+            <!-- <article class="post-card" data-md="${p.md}">
+              <h2 class="post-title">${p.title}</h2>
+              <p class="post-meta">${p.date} · ${tags.join(' / ')}</p>
+              <p class="post-excerpt">${p.excerpt}</p>
+            </article> -->
 
             <div class="pagination">
                 <a class="btn" href="#">上一页</a>
@@ -61,9 +86,16 @@
         </div>
     </footer>
 
-    <button id="backToTop" >↑</button>
+    <div id="backToTop" >↑</div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span id="close-modal" class="close">&times;</span>
+        <img id="modal-img" class="modal-content" />
+    </div>
 
     <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
 
 </body>
 </html>
