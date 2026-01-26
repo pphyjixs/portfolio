@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介绍</title>
+    <script>
+        (()=> {
+            try {
+                if (localStorage.getItem ("theme") === "dark") {
+                document.documentElement.classList.add ("dark");
+                } 
+            } catch {}
+        }) ();
+    </script>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand" >
+                <img class="avatar expandable-img"  src="../../assets/img/avatar.png" alt="avatar" >
+                <span class="brand-text">
+                    <strong>phyjixs</strong>
+                    <small>主页</small>
+                </span>
+            </div>
+
+            <nav class="site-nav">
+                <a href="../../index.html">主页</a>
+                <a href="../../project.html">项目展示</a>
+                <a href="../../contact.html">联系</a>
+            </nav>
+
+            <button id="theme-toggle" class="theme-toggle" aria-label="change theme">
+                🌙
+            </button>
+            
+        </div>
+    </header>
+
+
+    <main class="container">
+        <section class="content">
+            <div class="row">
+                <h2>Book Search:基于OpenLibrary API的图书查询系统</h2>
+            </div>
+            <input id="queryInput" placeholder="输入书名，作者等关键词搜索">
+            <button id="btnSearch">搜索</button>
+            <p id="status"></p>
+            <div id="result" class="book-grid"></div>
+            <button id="btnLoadMore" style="display: none;">加载更多</button>
+        </section>
+    </main>
+
+    
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 phyjixs Built my blog</p>
+        </div>
+    </footer>
+
+
+    
+
+    <div id="backToTop" >↑</div>
+
+    <script src="../../js/main.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

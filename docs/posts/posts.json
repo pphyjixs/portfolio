@@ -1,16 +1,26 @@
 [
     {
         "title": "学习路线",
+        "kind": "article",
         "date": "2026/1/18",
         "tags": ["汇总"],
         "excerpt": "关于速成前后端的学习路径",
-        "md": "posts/List.md"
+        "name": "posts/List.md"
     },
     {
         "title": "程设oj答案",
+        "kind": "article",
         "date": "2026/1/21",
         "tags": ["c++"],
         "excerpt": "当助教时整理的oj答案，用来水位置",
-        "md": "posts/第16周.md"
+        "name": "posts/第16周.md"
+    },
+    {
+        "title": "图书查询系统",
+        "kind": "project",
+        "date": "2026/1/26",
+        "tags": ["js"],
+        "excerpt": "调用openlibrary的api实现的图书查询系统",
+        "name": "BookSearch/index.html"
     }
 ]

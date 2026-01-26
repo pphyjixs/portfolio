@@ -162,6 +162,23 @@ html.dark .site-header {
     padding: 18px 18px;
 }
 
+/* 卡片类别角标 */
+.post-card {
+  position: relative;
+}
+.post-card::after {
+  content: attr(data-kind);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--bg);
+}
+
 .post-title{ margin: 0 0 6px; font-size: 20px; letter-spacing: .2px; }
 .post-meta{ margin: 0 0 10px; color: var(--muted); font-size: 13px; }
 .post-excerpt{margin: 0;  color: var(--muted); }

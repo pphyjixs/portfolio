@@ -5,7 +5,7 @@ const toc = document.getElementById("toc");
 function initPost () {
    const postBody = document.getElementById ("postBody");
    (async () => {
-    const mdPath = new URLSearchParams(location.search).get('md');
+    const mdPath = new URLSearchParams(location.search).get('name');
     if (!mdPath || !postBody) {
       console.error('no mdpath or postbody');
       return;

@@ -49,7 +49,7 @@ function setupPostList() {
       ? posts.map(p => {
           const tags = Array.isArray(p.tags) ? p.tags : [];
           return `
-            <article class="post-card" data-md="${p.md}">
+            <article class="post-card" data-name="${p.name}" data-kind="${p.kind ||""}">
               <h2 class="post-title">${p.title}</h2>
               <p class="post-meta">${p.date} · ${tags.join(' / ')}</p>
               <p class="post-excerpt">${p.excerpt}</p>
@@ -131,9 +131,12 @@ document.addEventListener ("DOMContentLoaded", ()=>{
   document.addEventListener('click', (e) => {
   const card = e.target.closest('.post-card');
   if (!card) return;
-  const md = card.dataset.md;
-  if (!md) return;
-  location.href = `post.html?md=${encodeURIComponent(md)}`;
+  const name = card.dataset.name;
+  if (!name) return;
+  if (card.dataset.kind === "article")
+    location.href = `post.html?name=${encodeURIComponent(name)}`;
+  else if (card.dataset.kind === "project")
+    location.href =`./projects/${encodeURI(name)}`;
 });
 }) ();
 
