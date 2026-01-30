@@ -1,20 +1,20 @@
-const commentForm = document.getElementById ("commentForm");
-const commentList = document.getElementById ("commentList");
-const errorMessage = document.getElementById ("errorMessage");
-
-const loadComments = ()=> {
-    const comments = JSON.parse(localStorage.getItem("comments")) || [];
-    commentList.innerHTML = "";
-    comments.forEach((comment)=> {
-        const liItem = document.createElement("li");
-        liItem.innerHTML = `<strong>${comment.name}</strong> (${comment.email}): ${comment.message}`;
+var commentForm = document.getElementById('commentForm');
+var commentList = document.getElementById('commentList');
+var errorMessage = document.getElementById('errorMessage');
+var loadComments = function () {
+    var comments = JSON.parse(localStorage.getItem('comments')) || [];
+    if (!commentList)
+        return;
+    commentList.innerHTML = '';
+    comments.forEach(function (cmt) {
+        var liItem = document.createElement('li');
+        liItem.innerHTML = "<strong>".concat(cmt.name, "</strong> (").concat(cmt.email, "): ").concat(cmt.comment);
         commentList.appendChild(liItem);
-    })
-}
-
-const validateForm = (name,email,message) =>{
+    });
+};
+var validateForm = function (name, email, message) {
     if (!name || !email || !message) {
-        errorMessage.textContent = "All fields are required";
+        errorMessage.textContent = '所有字段均为必填项';
         return false;
     }
     if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)) {
@@ -22,23 +22,22 @@ const validateForm = (name,email,message) =>{
         return false;
     }
     return true;
-}
-
-const submitComment =(e)=> {
+};
+var submitComment = function (e) {
     e.preventDefault();
-
-    const name = document.getElementById("formName").value;
-    const email = document.getElementById("formEmail").value;
-    const message = document.getElementById("formMessage").value;
-    if (validateForm (name,email,message)) {
-        const comments = JSON.parse (localStorage.getItem("comments"))||[];
-        comments.push ({name,email,message});
-        localStorage.setItem("comments",JSON.stringify(comments));
-        errorMessage.textContent = "";
+    var name = document.getElementById('formName').value;
+    var email = document.getElementById('formEmail').value;
+    var message = document.getElementById('formMessage').value;
+    if (validateForm(name, email, message)) {
+        var comments = JSON.parse(localStorage.getItem('comments')) || [];
+        comments.push({ name: name, email: email, comment: message });
+        localStorage.setItem('comments', JSON.stringify(comments));
+        errorMessage.textContent = '';
         commentForm.reset();
         loadComments();
     }
-}
-
+};
 loadComments();
-commentForm.addEventListener("submit",submitComment);
+if (commentForm) {
+    commentForm.addEventListener('submit', submitComment);
+}

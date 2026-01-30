@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>联系方式</title>
-
-
-    <script>
+    <title>项目展示</title>
+    
+   <script>
         (()=> {
             try {
                 if (localStorage.getItem ("theme") === "dark") {
@@ -16,17 +15,16 @@
         }) ();
     </script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/comment.css">
 </head>
 <body>
-    
+
     <header class="site-header">
         <div class="container header-inner">
-            <div class="brand" href="contact.html">
+           <div class="brand" href="contact.html">
                 <img class="avatar expandable-img"  src="assets/img/avatar.png" alt="avatar" >
                 <span class="brand-text">
                     <strong>phyjixs</strong>
-                    <small>联系</small>
+                    <small>项目展示</small>
                 </span>
             </div>
 
@@ -43,39 +41,28 @@
         </div>
     </header>
 
-
     <main class="container layout">
-        <section class="content content-tool">
+        <section class="content">
 
-            <div class = "tool-card">
-                <h2>联系方式</h2>
-                <span class="contact-email" data-copy="phyjixs@163.com"><strong>邮箱：</strong>phyjixs@163.com</span>
-                <a href="https://github.com/pphyjixs"><p class="contact-way"><strong>Github: </strong>pphyjixs</p></a>
+            <div id="toolbar">
+                <input type="text" class="search-input" id="searchInput" placeholder="搜索标题，概要，标签...">
+                <button id="clearSearch" class="btn btn-small" type="button">清空</button>
             </div>
 
-            <div class="tool-card">
-                <h2>留言表单</h2>
-                <form id="commentForm" class="comment-form">
-                    <label for="name">姓名：</label>
-                    <input type="text" id="formName" name="name" required>
+            <section id="postList"></section>
 
-                    <label for="email">电子邮件：</label>
-                    <input type="email" id="formEmail" name="email" required>
+            <!-- <article class="post-card" data-md="${p.md}">
+              <h2 class="post-title">${p.title}</h2>
+              <p class="post-meta">${p.date} · ${tags.join(' / ')}</p>
+              <p class="post-excerpt">${p.excerpt}</p>
+            </article> -->
 
-                    <label for="message">留言内容: </label>
-                    <textarea name="message" id="formMessage" rows="4" required></textarea>
-                
-                    <button type="submit">提交留言</button>
-                    <div class="error-message" id="errorMessage"></div>
-                </form>    
-            </div>
-
-            <div class="tool-card">
-                <h2>留言列表</h2>
-                <ul id="commentList"></ul>
+            <div class="pagination">
+                <a class="btn" href="#">上一页</a>
+                <a class="btn" href="#">下一页</a>
             </div>
         </section>
-
+        
         <aside class="sidebar">
             <section class="side-card">
                 <h3>关于我</h3>
@@ -98,7 +85,7 @@
             <p>© 2026 phyjixs Built my blog</p>
         </div>
     </footer>
-    
+
     <div id="backToTop" >↑</div>
 
     <!-- Modal -->
@@ -109,7 +96,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/modal.js"></script>
-    <script src="js/comment.js"></script>
 
 </body>
 </html>
